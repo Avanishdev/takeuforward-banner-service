@@ -7,16 +7,19 @@ const bannerSchema = new mongoose.Schema({
     },
     description: {
         type: String,
+        required: true,
     },
-    imageUrl: {
+    timer: {
+        type: Number,
+        required: true,
+    },
+    link: {
         type: String,
+        required: true,
     },
-    startDate: {
-        type: Date,
-        default: Date.now,
-    },
-    endDate: {
-        type: Date,
+    isVisible: {
+        type: Boolean,
+        required: true,
     },
 });
 
